@@ -1,5 +1,6 @@
 # WordCounter
- Word counter application to display the frequency of words from the book War and Peace or any other text file the user uploads
+ Word counter app to display the frequency of words from the book War and Peace or any other text file the user uploads. 
+ The application is built using jetpack compose
 
 Packages Structure
 

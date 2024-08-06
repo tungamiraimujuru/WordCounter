@@ -1,4 +1,4 @@
-package com.mobilemeister.wordcounter.ui.theme
+package com.mobilemeister.wordcounter.view.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

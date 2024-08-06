@@ -1,4 +1,4 @@
-package com.mobilemeister.wordcounter.ui.theme
+package com.mobilemeister.wordcounter.view.ui.theme
 
 import android.app.Activity
 import android.os.Build

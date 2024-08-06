@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    kotlin("kapt")
+    alias(libs.plugins.google.dagger.hilt)
 }
 
 android {
@@ -40,7 +42,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
+        kotlinCompilerExtensionVersion = "1.5.14"
     }
     packaging {
         resources {
@@ -59,11 +61,40 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
+
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    implementation(libs.google.dagger.hilt)
+    kapt(libs.google.dagger.hilt.compiler)
+
+    lintChecks(libs.slack.lint.compose)
+
+    implementation(libs.androidx.compose.foundation)
+    implementation(libs.androidx.navigation.compose)
+
+    testImplementation(libs.mockito.core)
+    testImplementation(libs.mockito.kotlin)
+
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+
+    testImplementation(libs.kotlinx.coroutines.test)
+
+    // Hilt extension for ViewMode
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+
+    implementation(libs.androidx.compose.runtime.livedata)
+
+    // Hilt Navigation Compose
+    implementation(libs.androidx.hilt.navigation)
+    kapt(libs.androidx.hilt.compiler)
+
+}
+
+kapt {
+    correctErrorTypes = true
 }

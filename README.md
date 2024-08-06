@@ -10,7 +10,7 @@ The application is packaged according to “package-by-feature” paradigm.
 Tech stack & Open-source libraries
 
 Minimum SDK level 24
-Kotlin based, Coroutines + Flow for asynchronous.
+Kotlin based, Coroutines for asynchronous.
 Jetpack Compose
 Hilt: for dependency injection.
 
